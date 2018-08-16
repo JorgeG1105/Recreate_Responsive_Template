@@ -93,7 +93,11 @@ body {
 
 /*-----------------------------------Media Queries---------------------------------------*/
 @media screen and (min-width: 320px) and (max-width: 812px) {
-	
+
+	.toggleDisplay {
+		display: block!important;
+	}
+
 	.mainNav {
 		padding: 0;
 		position: initial;
