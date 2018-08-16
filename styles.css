@@ -6,9 +6,10 @@ body {
 /*-----------------------------------Navigation Styles------------------------------------*/
 .mainNav {
 	text-align: center;
-	max-width: 100%;
-	background-color: #1C1C1C;
+	background-color: #151D2A;
 	padding: 30px;
+	width: 100%;
+	position: fixed;
 }
 
 .mainNav ul {
@@ -35,4 +36,93 @@ body {
 .mainNav li a:hover {
 	transition-timing-function: ease-in-out;
 	color: #FFFFFF;
+}
+/*------------------------------Hamburger styles----------------------------------------------*/
+.hamburger {
+	display: none;
+	cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+	width: 35px;
+	height: 5px;
+	background-color: white;
+	margin: 6px 0;
+	transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/*---------------------------------titleImgcontainer styles------------------------------------*/
+.titleImgContainer {
+	background-image: url(images/forest.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	text-align: center;
+	font-family: "Open Sans",Helvetica,Arial,sans-serif;
+
+}
+
+.titleImgContainer h1 {
+	margin: 0;
+	font-size: 70px;
+	padding-top: 200px;
+}
+
+.titleImgContainer h1, h2 {
+	color: white;
+	text-shadow: 2px 2px #000;
+}
+
+
+
+
+/*-----------------------------------Media Queries---------------------------------------*/
+@media screen and (min-width: 320px) and (max-width: 812px) {
+	
+	.mainNav {
+		padding: 0;
+		position: initial;
+		display: none;
+	}
+
+	.mainNav li {
+		display: inline-block;
+		width: 100%;
+		padding: 10px 0;
+		margin: 10px 0;
+		border-bottom: 1px solid #595959;
+	}
+
+	.mainNav li:last-child {
+		margin-bottom: 0;
+		border-bottom: none;
+	}
+
+	.mainNav li a {
+		border: none;
+		padding: 0;
+	}
+
+	.hamburger {
+		display: initial;
+		position: absolute;
+		z-index: 2;
+		right: 0;
+		margin-right: 10px;
+	}
 }
