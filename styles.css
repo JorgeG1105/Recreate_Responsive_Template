@@ -88,7 +88,81 @@ body {
 	text-shadow: 2px 2px #000;
 }
 
+/*------------------------------------About Us section----------------------------------*/
 
+.about-us-section {
+	display: flex;
+	padding-top: 70px;
+	text-align: left;
+	font-family: "Open Sans",Helvetica,Arial,sans-serif;
+	margin-left: 70px;
+	margin-right: 70px;
+}
+
+.card {
+	background-color: #F2F2F2;
+	margin: 20px;
+	flex: 1;
+}
+
+.card img {
+	vertical-align: middle;
+	width: 100%;
+}
+
+.cardText {
+	padding: 2px 16px;
+	line-height: 1.6em;
+	color: #333333;
+}
+
+.card1Title {
+	color: #178A27;
+}
+.card2Title {
+	color: #1686C1;
+}
+.card3Title {
+	color: #852406;
+}
+
+.green-btn, .blue-btn, .red-btn {
+	text-decoration: none;
+	color: #fff;
+	border-radius: 5px;
+	padding: 10px 30px;
+}
+
+.green-btn {
+	background-color: #178A27;
+	transition: background-color .5s;
+	font-size: 18px;
+}
+.green-btn:hover {
+	background-color: #429F4E;
+}
+.blue-btn {
+	background-color: #1686C1;
+	transition: background-color .5s;
+	font-size: 18px;
+}
+.blue-btn:hover {
+	background-color: #449DCD;
+}
+.red-btn {
+	background-color: #852406;
+	transition: background-color .5s;
+	font-size: 18px;
+}
+.red-btn:hover {
+	background-color: #9C4C34;
+}
+
+.btn-div {
+	text-align: center;
+	padding-bottom: 30px;
+	margin-top: 40px;
+}
 
 
 /*-----------------------------------Media Queries---------------------------------------*/
@@ -128,5 +202,9 @@ body {
 		z-index: 2;
 		right: 0;
 		margin-right: 10px;
+	}
+
+	.about-us-section {
+		display: initial;
 	}
 }
