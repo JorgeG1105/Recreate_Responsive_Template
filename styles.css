@@ -2,6 +2,7 @@
 body {
 	margin: 0;
 	padding: 0;
+	font-family: "Open Sans",Helvetica,Arial,sans-serif;
 }
 
 .row {
@@ -29,7 +30,6 @@ body {
 }
 
 .mainNav li a {
-	font-family: "Open Sans",Helvetica,Arial,sans-serif;
 	text-decoration: none;
 	color: #595959;
 	font-weight: 700;
@@ -79,7 +79,6 @@ body {
 	width: 100%;
 	height: 100vh;
 	text-align: center;
-	font-family: "Open Sans",Helvetica,Arial,sans-serif;
 
 }
 
@@ -101,8 +100,6 @@ body {
 	flex-wrap: wrap;
 	padding-top: 70px;
 	text-align: left;
-	/*font-family: "Open Sans",Helvetica,Arial, sans-serif;*/
-	font-family: "Open Sans", Helvetica, Arial, sans-serif!important;
 	margin-left: 70px;
 	margin-right: 70px;
 }
@@ -116,6 +113,7 @@ body {
 .card img {
 	vertical-align: middle;
 	width: 100%;
+	height: auto;
 }
 
 .cardText {
@@ -207,6 +205,35 @@ body {
 	text-align: right;
 }
 
+/*--------------------------------Services Section--------------------------------------*/
+
+.services-section {
+	text-align: left;
+	margin: 0 70px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.services {
+	display: flex;
+	margin-top: 60px;
+}
+
+.services-banner-img {
+	text-align: center;
+	background-image: url(images/servicesimg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 70%;
+	height: 45vh;
+	margin: 0;
+}
+
+.services-banner-img h2 {
+	margin: 0;
+	font-size: 50px;
+	padding-top: 40px;
+}
 
 /*-----------------------------------Media Queries---------------------------------------*/
 @media screen and (min-width: 320px) and (max-width: 812px) {
@@ -258,5 +285,38 @@ body {
 
 	.card {
 		margin: 30px 20px;
+	}
+
+	.card img {
+		max-height: 200px;
+	}
+
+	.services-banner-img {
+		background-position: 65% 70%;
+	}
+
+	.services-banner-img h2 {
+		padding-top: 100px;
+	}
+
+	.services {
+		display: initial;
+	}
+
+	.services-section {
+		margin: 0;
+	}
+}
+
+@media screen and (max-width: 812px) and (orientation: landscape) {
+	.services {
+		display: flex;
+	}
+	.services-banner-img {
+		height: 70vh;
+	}
+
+	.services-banner-img h2 {
+		padding-top: 50px;
 	}
 }
