@@ -8,6 +8,7 @@ body {
 .row {
 	display: flex;
 	margin: 25px 0px;
+	flex-wrap: wrap;
 }
 /*-----------------------------------Navigation Styles------------------------------------*/
 .mainNav {
@@ -91,6 +92,10 @@ body {
 .titleImgContainer h1, h2 {
 	color: white;
 	text-shadow: 2px 2px #000;
+}
+
+.titleImgContainer h2 {
+	padding: 10px;
 }
 
 /*------------------------------------About Us section----------------------------------*/
@@ -248,24 +253,225 @@ body {
 	padding-bottom: 60px;
 }
 
+.contact-form h2 {
+	font-size: 50px;
+}
 
-.contact-content {
+
+.contact-content-p {
 	display: flex;
+	justify-content: center;
 }
 
 .contact-p {
 	background: rgba(242, 242, 242, 0.4) none repeat scroll 0 0;
 	border-radius: 5px;
 	color: #000;
-	font-size: 16px;
-	/*margin-bottom: 20px;*/
+	font-size: 15px;
 	padding: 20px 15px;
-	flex-basis: auto;
-	margin: 20px auto;
+	margin: 20px;
+}
+
+.contact-content-form {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+
+.contact input{
+	background: rgba(242, 242, 242, 0.4) none repeat scroll 0 0;
+	border-radius: 5px;
+	color: black;
+	font-size: 15px;
+	padding: 10px 15px;
+	margin: 5px;
+	border: none;
+	width: 350px;
+}
+
+.contact input::placeholder {
+	color: black;
+}
+
+.textarea {
+	background: rgba(242, 242, 242, 0.4) none repeat scroll 0 0;
+	border-radius: 5px;
+	color: black;
+	font-size: 15px;
+	padding: 10px 15px;
+	margin: 5px;
+	border: none;
+	width: 500px;
+	font-family: "Open Sans",Helvetica,Arial,sans-serif;
+}
+
+.textarea::placeholder {
+	color: black;
+}
+
+.submit-btn {
+	color: #595959;
+	font-weight: 700;
+	padding: 15px 25px;
+	border: 1px solid #595959;
+	background-color: #151D2A;
+	margin-top: 20px;
+	transition: color border .5s;
+}
+
+.submit-btn:hover {
+	transition-timing-function: ease-in-out;
+	color: #FFFFFF;
+	border: 1px solid #fff;
+}
+
+footer {
+	text-align: center;
+	font-family: "Open Sans",Helvetica,Arial,sans-serif;
+	font-size: 15px;
+}
+
+footer h3 {
+	font-size: 32px;
+	font-style: italic;
+	color: #151D2A;
+}
+
+footer p {
+	font-style: italic;
+	color: #151D2A;
+	margin: 20px 20px 40px 20px;
+}
+
+hr {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: 1px solid #eee;
+}
+
+.copyright {
+	font-style: normal;
+	font-size: 12px;
 }
 
 /*-----------------------------------Media Queries---------------------------------------*/
-@media screen and (min-width: 320px) and (max-width: 812px) {
+@media all and (min-width: 320px) and (max-width: 533px) {
+	.row {
+		display: initial;
+		margin: 40px 0px;
+	}
+
+	.toggleDisplay {
+		display: block!important;
+	}
+
+	.mainNav {
+		padding: 0;
+		position: initial;
+		display: none;
+	}
+
+	.mainNav li {
+		display: inline-block;
+		width: 100%;
+		padding: 10px 0;
+		margin: 10px 0;
+		border-bottom: 1px solid #595959;
+	}
+
+	.mainNav li:last-child {
+		margin-bottom: 0;
+		border-bottom: none;
+	}
+
+	.mainNav li a {
+		border: none;
+		padding: 0;
+	}
+
+	.hamburger {
+		display: initial;
+		position: absolute;
+		z-index: 2;
+		right: 0;
+		margin-right: 10px;
+		margin-top: 10px;
+	}
+
+	.about-us-section {
+		display: initial;
+	}
+
+	.card {
+		margin: 30px 20px;
+	}
+
+	.card img {
+		max-height: 200px;
+	}
+
+	.services-banner-img {
+		background-position: 65% 70%;
+	}
+
+	.services-banner-img h2 {
+		padding-top: 100px;
+	}
+
+	.services {
+		display: initial;
+	}
+
+	.services-section {
+		margin: 0;
+	}
+
+	.contact-content-p {
+		display: initial;
+	}
+
+	.contact-content-form {
+		display: initial;
+	}
+
+	.contact input {
+		width: 250px;
+	}
+
+	.textarea {
+		width: 250px;
+	}
+}
+
+@media all and (max-width: 533px) and (orientation: landscape) {
+	.titleImgContainer h1 {
+		padding-top: 100px;
+	}
+	.services {
+		flex-wrap: wrap;
+	}
+}
+
+@media all and (max-width: 568px) and (orientation: landscape) {
+	.services {
+		flex-wrap: wrap;
+	}
+}
+
+@media all and (max-width: 640px) and (orientation: landscape) {
+	.titleImgContainer h1 {
+		padding-top: 100px;
+	}
+}
+
+@media all and (max-width: 667px) and (orientation: landscape) {
+	.titleImgContainer h1 {
+		padding-top: 100px;
+	}
+}
+
+
+@media screen and (min-width: 375px) and (max-width: 812px) {
 
 	.row {
 		display: initial;
@@ -335,6 +541,29 @@ body {
 	.services-section {
 		margin: 0;
 	}
+
+	.contact-content-p {
+		display: initial;
+	}
+
+	.contact-content-form {
+		display: initial;
+	}
+
+	.contact input {
+		width: 300px;
+	}
+
+	.textarea {
+		width: 300px;
+	}
+}
+
+@media all and (width: 768px) and (height: 1024px) {
+	.submit-btn {
+		display: flex;
+		margin: 0 auto;
+	}
 }
 
 @media screen and (max-width: 812px) and (orientation: landscape) {
@@ -347,5 +576,10 @@ body {
 
 	.services-banner-img h2 {
 		padding-top: 50px;
+	}
+
+	.submit-btn {
+		display: flex;
+		margin: 10px auto;
 	}
 }
